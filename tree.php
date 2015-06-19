@@ -4,13 +4,21 @@
   * License: http://www.gnu.org/licenses/gpl.html GPL version 2 or higher
   */
 
+  // settings
+
+  $base = "172.23.2.1";     // ip or hostname of (any) BS
+  $user = "admin";          // username of BS
+  $pass = "admin";          // password of BS
+
+  // end of settings
+
   error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
-  // helper fucntions
+  // inline helper fucntions
   $unhex   = function($value) { return substr($value, 2); };
   $hex2int = function($value) { return hexdec($value); };
 
-  $multicell = join(" ", file("http://admin:admin@172.23.2.1/MultiCell.html"));
+  $multicell = join(" ", file("http://$user:$pass@$base/MultiCell.html"));
 
   // get chain IPs
   preg_match("/.*SetSyncIpChain\(\"(.*)\"\);.*/", $multicell, $data);
