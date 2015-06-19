@@ -84,7 +84,5 @@
     header("Content-type: image/png");
     //system("echo ".escapeshellarg($graph)." | fdp -Tpng");
     system("echo ".escapeshellarg($graph)." | dot -Tpng");
-    //system("echo ".escapeshellarg($graph)." | twopi -Tpng");
-    //system("echo ".escapeshellarg($graph)." | neato -Tpng");
   }
 ?>
