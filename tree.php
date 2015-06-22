@@ -18,7 +18,7 @@
                      "DECT03" => "Somewhere over the Rainbow",
                      "DECT04" => "Uberwald");
 
-  $footer = "DECT Sync Tree DIENES";
+  $footer = "DECT Sync Tree";
   // end of settings
 
 
