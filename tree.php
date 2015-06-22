@@ -1,7 +1,10 @@
 <?php
-  /*
+  error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
+ /*
   * Copyright (c) 2015 Sascha.Ludwig@dienes.de
   * License: http://www.gnu.org/licenses/gpl.html GPL version 2 or higher
+  * Version: 0.2
   */
 
   // settings
@@ -10,9 +13,18 @@
   $user = "admin";          // username of BS
   $pass = "admin";          // password of BS
 
+  $location = array( "DECT01" => "Farbenlager",
+                     "DECT02" => "Verwaltung Treppenhaus",
+                     "DECT03" => "Härterei",
+                     "DECT04" => "AV/Einkauf",
+                     "DECT05" => "FiBu/Garten",
+                     "DECT06" => "EDV",
+                     "DECT07" => "Laser/Rohmaterial",
+                     "DECT08" => "Haupttor",
+                     "DECT09" => "QS/Montage",
+                     "DECT10" => "Neue Halle" );
   // end of settings
 
-  error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
   // inline helper fucntions
   $unhex   = function($value) { return substr($value, 2); };
@@ -74,7 +86,7 @@
           if( $i == $chain_sync[$i] ) {
               $master_label = " (MASTER)";
           } else { $master_label = ""; }
-          $graph .= sprintf("  %s [label=<%s<br/><font point-size=\"8\">%s</font><br/><font point-size=\"8\">%s</font><br/><font point-size=\"8\">RPN%02X%s</font>>];\n", $bs_names[$i], $bs_names[$i], $chain_mac[$i], $chain_ip[$i], $i*4, $master_label);
+          $graph .= sprintf("  %s [label=<%s<br/><font point-size=\"8\">%s<br/>%s<br/>%s<br/>RPN%02X%s</font>>];\n", $bs_names[$i], $bs_names[$i], $chain_mac[$i], htmlentities(utf8_decode($location[$bs_names[$i]])), $chain_ip[$i], $i*4, $master_label);
       }
   }
 
