@@ -13,14 +13,14 @@
   $user = "admin";          // username of BS
   $pass = "admin";          // password of BS
 
-  $location = array( "DECT01" => "Farbenlager",
+  $location = array( "DECT01" => "Farbenlager (Aussen)",
                      "DECT02" => "Verwaltung Treppenhaus",
                      "DECT03" => "Härterei",
                      "DECT04" => "AV/Einkauf",
-                     "DECT05" => "FiBu/Garten",
+                     "DECT05" => "FiBu/Garten (Aussen)",
                      "DECT06" => "EDV",
                      "DECT07" => "Laser/Rohmaterial",
-                     "DECT08" => "Haupttor",
+                     "DECT08" => "Haupttor (Aussen)",
                      "DECT09" => "QS/Montage",
                      "DECT10" => "Neue Halle" );
   // end of settings
