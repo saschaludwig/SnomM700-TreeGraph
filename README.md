@@ -6,10 +6,10 @@ Requires: graphviz (http://www.graphviz.org)
 Configuration:
 --------------
 
-    cp example.config.php example.config.php
+    cp example.config.php config.php
 
 
-Change values for base/user/pass, modify/add more location strings to location array.
+Change values in config.php for base/user/pass, modify/add more location strings to location array.
 The location array is used to give every basestation a meaningful description.
 
 ###### Here is an example image of a tree-graph:
