@@ -1,34 +1,6 @@
 <?php
   error_reporting(E_ERROR | E_WARNING | E_PARSE);
-
- /*
-  * Copyright (c) 2015 Sascha.Ludwig@dienes.de
-  * License: http://www.gnu.org/licenses/gpl.html GPL version 2 or higher
-  * Version: 0.2
-  */
-
-  // settings
-
-  $base = "172.23.2.1";     // ip or hostname of (any) BS
-  $user = "admin";          // username of BS
-  $pass = "admin";          // password of BS
-
-  $location = array( "DECT01" => "Farbenlager (Aussen)",
-                     "DECT02" => "Verwaltung Treppenhaus",
-                     "DECT03" => "Härterei",
-                     "DECT04" => "AV/Einkauf",
-                     "DECT05" => "FiBu/Garten (Aussen)",
-                     "DECT06" => "EDV",
-                     "DECT07" => "Laser/Rohmaterial",
-                     "DECT08" => "Haupttor (Aussen)",
-                     "DECT09" => "QS/Montage",
-                     "DECT10" => "Neue Halle",
-                     "DECT11" => "TZ (Aussen)",
-                     "DECT12" => "nirgendwo" );
-
-  $footer = "DECT Sync Tree DIENES";
-  // end of settings
-
+  require_once("config.php");
 
   // inline helper fucntions
   $unhex   = function($value) { return substr($value, 2); };
