@@ -13,4 +13,5 @@ Change values for base/user/pass, modify/add more location strings to location a
 The location array is used to give every basestation a meaningful description.
 
 ###### Here is an example image of a tree-graph:
+[click here for a large image](https://raw.githubusercontent.com/saschaludwig/SnomM700-TreeGraph/master/example.png)
 ![Example graph](example.png)
