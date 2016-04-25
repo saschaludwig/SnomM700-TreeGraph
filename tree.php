@@ -76,6 +76,9 @@
   overlap=scale;
   splines=true;
   node [shape = ellipse];
+  graph [fontname = "Sans-Serif"];
+  node [fontname = "Sans-Serif"];
+  edge [fontname = "Sans-Serif"];
   ');
 
   $rssi_sum = 0;
@@ -130,7 +133,7 @@
   }
 
   if ( $rssi_sum_unknown ) {
-      $rssi_sum_text = "RSSI sum currently not calulateable";
+      $rssi_sum_text = "RSSI sum currently not calulateable (>1 RSSI is unknown)";
   } else {
       $rssi_sum_text = sprintf('calculated RSSI sum=%d', $rssi_sum);
   }
